@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer"; // ← add footer import
 
 import Intro from "./pages/Intro";
 import Work from "./pages/Work";
@@ -11,8 +12,14 @@ export default function App() {
     <Router>
       <Navbar />
 
-      {/* Push content below fixed navbar */}
-      <div style={{ paddingTop: "80px", paddingLeft: "40px", paddingRight: "40px" }}>
+      <div
+        style={{
+          paddingTop: "80px",
+          paddingLeft: "40px",
+          paddingRight: "40px",
+          minHeight: "80vh", // ensures footer stays below content
+        }}
+      >
         <Routes>
           <Route path="/" element={<Intro />} />
           <Route path="/work" element={<Work />} />
@@ -20,6 +27,8 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+
+      <Footer /> {/* ← footer at the bottom */}
     </Router>
   );
 }

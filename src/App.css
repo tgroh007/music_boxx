@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.footer-link {
+  text-decoration: none; /* initial state */
+}
+
+.footer-link:hover {
+  color: #1976d2;      /* hover color */
+  text-decoration: underline; /* hover underline */
+}
+.footer-link:active {
+  color: #004ba0;      /* active color */
+}
