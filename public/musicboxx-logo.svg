@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="90" stroke="#1976d2" stroke-width="8" fill="none"/>
+  
+  <!-- Inner music note -->
+  <path d="M100 50 L100 120 Q105 125 110 120 L110 70 Q105 65 100 70 Z" fill="#1976d2"/>
+  <circle cx="110" cy="120" r="5" fill="#1976d2"/>
+  
+  <!-- Optional decorative arcs -->
+  <ellipse cx="100" cy="100" rx="70" ry="35" fill="none" stroke="#61dafb" stroke-width="4" transform="rotate(45 100 100)"/>
+  <ellipse cx="100" cy="100" rx="70" ry="35" fill="none" stroke="#61dafb" stroke-width="4" transform="rotate(-45 100 100)"/>
+</svg>

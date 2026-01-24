@@ -1,3 +1,4 @@
+/* Navbar container */
 .navbar {
   position: fixed;
   top: 0;
@@ -16,10 +17,22 @@
   flex-wrap: wrap;
 }
 
+/* Logo */
 .logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #a62828; /* black logo text */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-svg {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.logo:hover .logo-svg {
+  transform: scale(1.1);               /* slight grow on hover */
+  filter: drop-shadow(0 0 5px #1976d2); /* subtle glow */
 }
 
 /* Hamburger button */
@@ -29,10 +42,10 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #000000; /* black hamburger */
+  color: #000000; /* visible on white navbar */
 }
 
-/* Links */
+/* Navbar links */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -47,7 +60,7 @@
   transition: color 0.3s;
 }
 
-/* Underline animation */
+/* Underline animation for links */
 .nav-link::after {
   content: "";
   position: absolute;
