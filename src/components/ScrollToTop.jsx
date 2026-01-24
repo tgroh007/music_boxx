@@ -4,10 +4,9 @@ import "./ScrollToTop.css";
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
 
-  // Show button when scrolled down
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 200) {
         setVisible(true);
       } else {
         setVisible(false);
@@ -18,7 +17,6 @@ export default function ScrollToTop() {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  // Scroll smoothly to top
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -28,7 +26,7 @@ export default function ScrollToTop() {
 
   return (
     <button
-      className={`scroll-top ${visible ? "show" : ""}`}
+      className={`scroll-to-top ${visible ? "show" : ""}`}
       onClick={scrollToTop}
       aria-label="Scroll to top"
     >
