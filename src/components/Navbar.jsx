@@ -9,9 +9,14 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-container">
-        {/* Logo SVG linking to home */}
+        {/* Logo + Brand linking to home */}
         <NavLink to="/" className="logo" onClick={() => setOpen(false)}>
           <img src="/musicboxx-logo.svg" alt="MusicBoxx Logo" className="logo-svg" />
+
+          <div className="logo-text-group">
+            <span className="logo-text">MusicBoxx</span>
+            <span className="logo-subtext">Creative</span>
+          </div>
         </NavLink>
 
         {/* Hamburger button for mobile */}
