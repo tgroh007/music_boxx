@@ -1,12 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <!-- Outer ring -->
-  <circle cx="100" cy="100" r="90" stroke="#1976d2" stroke-width="8" fill="none"/>
-  
-  <!-- Inner music note -->
-  <path d="M100 50 L100 120 Q105 125 110 120 L110 70 Q105 65 100 70 Z" fill="#1976d2"/>
-  <circle cx="110" cy="120" r="5" fill="#1976d2"/>
-  
-  <!-- Optional decorative arcs -->
-  <ellipse cx="100" cy="100" rx="70" ry="35" fill="none" stroke="#61dafb" stroke-width="4" transform="rotate(45 100 100)"/>
-  <ellipse cx="100" cy="100" rx="70" ry="35" fill="none" stroke="#61dafb" stroke-width="4" transform="rotate(-45 100 100)"/>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Blue circle behind logo -->
+  <circle cx="60" cy="60" r="58" fill="#1976d2" opacity="0.15"/>
+
+  <!-- Glow filter for orbits and center dot -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Orbit 1 -->
+  <ellipse
+    cx="60" cy="60"
+    rx="38" ry="18"
+    fill="none"
+    stroke="#1976d2"
+    stroke-width="4"
+    filter="url(#glow)"
+  >
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 60 60"
+      to="360 60 60"
+      dur="15s"
+      repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Orbit 2 -->
+  <ellipse
+    cx="60" cy="60"
+    rx="38" ry="18"
+    fill="none"
+    stroke="#64b5f6"
+    stroke-width="4"
+    filter="url(#glow)"
+    transform="rotate(60 60 60)"
+  >
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="60 60 60"
+      to="420 60 60"
+      dur="18s"
+      repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Orbit 3 -->
+  <ellipse
+    cx="60" cy="60"
+    rx="38" ry="18"
+    fill="none"
+    stroke="#1e88e5"
+    stroke-width="4"
+    filter="url(#glow)"
+    transform="rotate(120 60 60)"
+  >
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="120 60 60"
+      to="480 60 60"
+      dur="22s"
+      repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Center dot -->
+  <circle cx="60" cy="60" r="4" fill="#1976d2" filter="url(#glow)"/>
+
+  <!-- Diagonal M -->
+  <text
+    x="50"
+    y="56"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="26"
+    font-weight="800"
+    fill="#111111"
+  >
+    M
+  </text>
+
+  <!-- Diagonal B -->
+  <text
+    x="69"
+    y="82"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="26"
+    font-weight="800"
+    fill="#111111"
+  >
+    B
+  </text>
+
 </svg>
